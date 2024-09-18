@@ -1,0 +1,641 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    border: 4px solid black;
+    background-color: #ccc;
+}
+
+/* ==== nav bar start===== */
+/* there are two parts of the nav bar */
+nav {
+    background-color: rgb(245, 246, 247);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    z-index: 100;
+}
+
+.nav_left {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    margin-left: 50px;
+}
+
+.searchbox {
+    background-color: #e1e6ee;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    margin-left: 8px;
+    padding: 7px;
+}
+
+.searchbox input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    width: 100%;
+
+}
+
+.searchbox img {
+    padding-right: 0;
+}
+
+/* two parts of nav bar and in right side nav bar there are two subparts also 1.center nav 2. right nav */
+/* center nav bar styling */
+.right_nav {
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+}
+
+
+.nav_center ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+.nav_center img {
+    opacity: 0.6;
+}
+
+.nav_center ul li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    font-size: 15px;
+    color: black;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.nav_center a img:hover {
+    color: black;
+    opacity: 1;
+}
+
+/* right nav bar styling */
+
+.drop {
+    display: flex;
+    flex-direction: row;
+    border-left: 2px solid #ccc;
+    padding-left: 10px;
+    margin-right: 100px;
+}
+
+.drop img {
+    border: 1px solid rgb(245, 246, 247);
+    border-radius: 50%;
+    margin-top: 9px;
+}
+
+.drop button {
+    background-color: none;
+    border: none;
+    margin-top: 39px;
+    margin-left: -30px;
+}
+
+.drop p {
+    font-size: small;
+    padding-left: 30px;
+    padding-top: 18px;
+}
+
+
+
+/* ===nav bar complete==== */
+
+
+/* ======= main page css===== */
+.mainpage {
+    display: flex;
+    padding: 20px 100px 20px 100px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* left side box styling */
+
+.leftp {
+    background-color: white;
+    flex-basis: 20%;
+    align-self: flex-start;
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.leftp img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.left_cen {
+    margin-top: -50px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.left_cen img {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+}
+
+.left_cen p {
+    font-weight: 300;
+}
+
+.connection {
+    border-top: 2px solid #ccc;
+    padding: 10px;
+    padding-left: 5px;
+}
+
+.connection h5 {
+    font-weight: 300;
+    font-size: medium;
+    padding-bottom: 7px;
+}
+
+.connection span {
+    font-size: x-large;
+    font-weight: 500;
+    color: rgb(97, 97, 216);
+    float: right;
+}
+
+
+.connection p {
+    font-size: larger;
+    padding-top: 15px;
+    padding-bottom: 8px;
+}
+
+.t_box {
+    padding: 10px;
+    border-top: 2px solid #ccc;
+}
+
+.t_box p {
+    font-weight: 100px;
+}
+
+.t_box h4 {
+    font-weight: 500;
+}
+
+.f_box {
+    border-top: 2px solid #ccc;
+    border-bottom: 3px solid #ccc;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: baseline;
+}
+
+.f_box p {
+    display: inline;
+    text-indent: 5px;
+    font-weight: 400;
+}
+
+.blank {
+    height: 15px;
+}
+
+.recent_box {
+    padding: 10px;
+    border-top: 3px solid #ccc;
+    border-radius: 20px;
+}
+
+.recent_box h4 {
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.recent_box ul li {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.recent_box h3 {
+    color: blue;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.grps ul li {
+    display: flex;
+    justify-content: baseline;
+}
+
+.grps img {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+/* left side box styling ends */
+
+
+/* center panel styling 
+two posts inside this with a create post area */
+.mid_p {
+    flex-basis: 45%;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* create post area styling */
+.post {
+    background-color: white;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    border-bottom: 2px solid #ccc;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.postbox {
+    display: flex;
+    justify-content: baseline;
+    padding: 15px;
+}
+
+.postbox input {
+    margin-top: 10px;
+    height: 40px;
+    width: 80%;
+    border-radius: 40px;
+    text-indent: 10px;
+
+}
+
+.postbox img {
+    border: 1px solid white;
+    border-radius: 50%;
+    padding-right: 1px;
+}
+
+.post_icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 5px 1px 20px;
+
+}
+
+.post_icons img {
+    height: 20px;
+    width: 20px;
+}
+
+/* center panel first post */
+.myntra {
+    background-color: white;
+    box-sizing: border-box;
+    border-top: 20px solid #ccc;
+}
+
+.myn_php {
+    display: block;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+
+
+.myn_php h3 {
+    margin-top: -10px;
+    font-size: small;
+}
+
+.mnt_h {
+    margin-top: -50px;
+    margin-left: 90px;
+}
+
+.mnt_h h2 {
+    font-size: large;
+}
+
+.mnt_h p {
+    font-size: small;
+}
+
+.mnt_h span {
+    float: right;
+    background-color: white;
+    font-size: 40px;
+    margin-top: -30px;
+    margin-right: 15px;
+}
+
+.virat_php img {
+    height: 450px;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+.bottom_bar {
+    border-bottom: 2px solid #ccc;
+    display: flex;
+    justify-self: baseline;
+    padding: 5px;
+}
+
+.bottom_bar img {
+    height: 15px;
+    width: 15px;
+    box-sizing: content-box;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+
+.bottom_bar span {
+    font-weight: 200;
+    font-size: small;
+    padding-left: 10px;
+}
+
+.likebar {
+    border-bottom: 15px solid #ccc;
+    display: flex;
+    justify-self: baseline;
+    padding: 5px;
+}
+
+.likebar img {
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+}
+
+.likebar span {
+    font-size: medium;
+    padding-right: 25px;
+}
+
+/* center panel second post this is about facebook with a iframe video */
+.fbcom {
+    background-color: white;
+}
+
+.fbpic {
+    display: block;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.fbpic img {
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+}
+
+.fbpic h3 {
+    margin-top: -10px;
+    font-size: small;
+}
+
+.fb_hh {
+    margin-top: -60px;
+    margin-left: 90px;
+    padding-bottom: 20px;
+}
+
+.fb_hh p {
+    font-size: small;
+}
+
+.fb_bar {
+    border-bottom: 2px solid #ccc;
+    display: flex;
+    justify-self: baseline;
+    padding: 5px;
+}
+
+.fb_bar img {
+    height: 15px;
+    width: 15px;
+    box-sizing: content-box;
+    border: 1px solid white;
+    border-radius: 50%;
+
+}
+
+.fb_bar span {
+    font-weight: 300;
+    font-size: small;
+    padding-left: 10px;
+}
+
+.fblike_bar {
+    border-bottom: 20px solid #ccc;
+    display: flex;
+    justify-self: baseline;
+    padding: 5px;
+
+}
+
+.fblike_bar img {
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+}
+
+
+
+
+.fblike_bar span {
+    font-size: medium;
+    padding-right: 25px;
+}
+
+/* center panel styling ends */
+/* right panel styling starts there are 3 parts inside this */
+.new1 {
+    flex-basis: 22%;
+    align-self: flex-start;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.rightp {
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 10px 5px 15px;
+    margin-bottom: 20px;
+}
+
+.rightp h4 {
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.rightp img {
+    float: right;
+}
+
+.rightp ul li {
+    font-weight: 500;
+    font-size: 15px;
+    padding-left: 2px;
+    margin-left: 12px;
+}
+
+.rightp span {
+    font-size: small;
+    font-weight: 100;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* first news box styling ends */
+
+.new2 {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px 10px 10px 15px;
+    margin-bottom: 20px;
+    border-bottom: 5px solid #ccc;
+}
+
+
+.new2 ul li {
+    font-weight: 500;
+    font-size: 15px;
+    padding-left: 2px;
+    margin-left: 15px;
+}
+
+.new2 img {
+    float: right;
+    margin-top: 15px;
+}
+
+.new2 span {
+    font-size: small;
+    font-weight: 100;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.new2 h4 {
+    padding-bottom: 20px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* second news feed styling ends */
+.new3 {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px 0px 10px 0px;
+}
+
+.iicon {
+    margin: 0px 15px 5px 10px;
+}
+
+.iicon img {
+    float: right;
+}
+
+.uni_p {
+    border-bottom: 2px solid #ccc;
+    padding: 20px 5px 0px 5px;
+}
+
+.unp_pp {
+    margin-top: -45px;
+    margin-left: 50px;
+    padding-bottom: 10px;
+}
+
+.uni_p h3 {
+    font-size: medium;
+    font-weight: 500;
+}
+
+.uni_p p {
+    font-size: small;
+    font-weight: 200;
+}
+
+.link_p {
+    border-bottom: 2px solid #ccc;
+    padding: 10px 0px 10px 5px;
+}
+
+.lin_hh {
+    margin-top: -45px;
+    margin-left: 50px;
+}
+
+.lin_hh h3 {
+    font-size: medium;
+    font-weight: 500;
+}
+
+.lin_hh p {
+    font-size: small;
+    font-weight: 200;
+}
+
+.myn {
+    padding: 10px 0px 10px 5px;
+    border-bottom: 2px solid #ccc;
+}
+
+.my_hp {
+    margin-top: -45px;
+    margin-left: 50px;
+    padding-bottom: 20px;
+}
+
+.my_hp h3 {
+    font-size: medium;
+    font-weight: 500;
+}
+
+.my_hp {
+    font-size: small;
+    font-weight: 200;
+}
+
+.new3 button {
+    margin-top: 15px;
+    height: 25px;
+    width: 180px;
+    border-radius: 50px;
+    background-color: white;
+}
